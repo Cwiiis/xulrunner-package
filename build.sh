@@ -159,6 +159,13 @@ case $TARGET_CONFIG in
     BUILD_QT5QUICK1=true
     MOZCONFIG=mozconfig.qtdesktop
     ;;
+  "desktop-gtk")
+    echo "Building for desktop with Gtk+2"
+    MOZCONFIG=mozconfig.gtkdesktop
+    ENGINE_ONLY=true
+    BUILD_X=true
+    GLPROVIDER=GLX
+    ;;
   "harmattan")
     echo "Building for harmattan"
     ROOTFSNAME=HARMATTAN_ARMEL
